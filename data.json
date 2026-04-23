@@ -1,0 +1,23 @@
+{
+  "name": "Danchoby",
+  "bio": "🚀 Создаю сайты",
+  "avatar": "avatar.jpg",
+  "verified": true,
+  "links": [
+    {
+      "title": "YouTube",
+      "url": "https://youtube.com",
+      "icon": "youtube.png"
+    },
+    {
+      "title": "Instagram",
+      "url": "https://instagram.com",
+      "icon": "instagram.png"
+    },
+    {
+      "title": "Telegram",
+      "url": "https://t.me",
+      "icon": "telegram.png"
+    }
+  ]
+}
