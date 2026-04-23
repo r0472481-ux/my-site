@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ profile.name }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+
+    <img class="avatar" src="{{ url_for('static', filename='icons/' + profile.avatar) }}">
+
+    <h1>
+        {{ profile.name }}
+        {% if profile.verified %}
+            ✔
+        {% endif %}
+    </h1>
+
+    <p>{{ profile.bio }}</p>
+
+    <div class="links">
+        {% for link in profile.links %}
+            <a class="link" href="{{ link.url }}" target="_blank">
+                <img class="icon" src="{{ url_for('static', filename='icons/' + link.icon) }}">
+                {{ link.title }}
+            </a>
+        {% endfor %}
+    </div>
+
+</div>
+
+</body>
+</html>

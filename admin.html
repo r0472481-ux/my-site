@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Admin</title>
+</head>
+<body>
+
+<h1>Редактирование профиля</h1>
+
+<form method="POST">
+
+    <input name="name" value="{{ profile.name }}" placeholder="Имя"><br><br>
+
+    <input name="bio" value="{{ profile.bio }}" placeholder="Описание"><br><br>
+
+    <input name="avatar" value="{{ profile.avatar }}" placeholder="Avatar URL"><br><br>
+
+    <h3>Ссылки</h3>
+
+    {% for link in profile.links %}
+        <input name="title" value="{{ link.title }}">
+        <input name="url" value="{{ link.url }}"><br><br>
+    {% endfor %}
+
+    <button type="submit">Сохранить</button>
+
+</form>
+
+</body>
+</html>
